@@ -1,0 +1,372 @@
+
+
+
+.navbar{
+
+    display: flex !important;
+    justify-content: center !important;
+   background:#213b45;
+	padding: 0px 6vw;
+	
+.sideNavMenu{
+	height: 100%;
+    margin-right: 4vw;
+    cursor: pointer;
+
+}
+
+	svg {
+		fill: red;
+	}
+	
+	a{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	i{
+		color: whitesmoke;
+		font-size: 30px;
+	}
+	button{
+		background: none;
+		color: whitesmoke;
+		border: 1px solid whitesmoke;
+		border-radius: 20px;
+		text-transform:capitalize;
+		font-size: 1.2em;
+		text-align: center;
+		padding: 5px auto;
+		line-height: initial;
+
+	}
+}
+
+.navSearchD{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	width: 45vw;
+	height: inherit;
+	margin: 0 auto;
+	padding: 0px 10px;
+	.navSearch{
+		width: 90% !important;
+		color:white;
+	}
+		
+
+
+	&:before{
+		content: "{";
+   // position: absolute;
+   // left: 0;
+   font-size: 50px;
+   line-height: normal;
+   color: whitesmoke;
+   display: contents;
+       font-weight: 300;
+}
+&:after{
+	content: "}";
+   // position: absolute;
+   // right: 0;
+   font-size: 50px;
+   line-height: normal;
+   color:whitesmoke;
+   display: contents;
+       font-weight: 300;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*      LOGİN CARD
+*
+*/
+
+$login-color:#436d73;
+$form-login-icon:#436d73;
+$form-login-button:#436d73;
+
+/*input*/
+$label-color:#000;          // üstünde olan label
+$label-focus-color:#000; //küçüldüğünde
+$form-icon-focus-color:#000;
+$caret-color:#436d73; //imleç rengi
+
+/*github gelene kadar*/
+.isDisabled {
+	pointer-events:none;
+	
+}
+
+body {
+ /*position*/
+
+ 
+/*theme*/
+background-color: white;
+}
+#close{
+	/*positon*/
+	width: 35px;
+	height: 35px;
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	/*theme*/
+	cursor: default;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background: #ea4335;
+	border-radius: 32%;
+	align-items: center;
+	color: #fff;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-block{
+
+/*position*/
+width: 30vw;
+height: auto;
+margin: auto;
+border-radius: 10px;
+overflow: hidden;
+padding: 1.5% 4%;
+
+/*theme*/
+position: relative;
+background: #fff;
+display: none;
+
+/*other*/
+.errForm{
+	position: relative;
+	top: -0.5rem;
+	left: 3rem;
+	font-size: 0.8rem;
+	color: #FF4081;
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+#loading{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+    //visibility: hidden;
+    display: none;
+}
+h1{
+	margin: 0 auto;
+	color: $login-color;
+	font-family: 'Poppins', sans-serif;
+	font-size: 39px;
+	line-height: 1.2;
+	text-align: center;
+}
+.form-brackets {    
+/*position*/
+width: 85%;
+margin: 15px auto; 
+
+	/*theme*/
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	line-height: 0.1em;
+
+  /*other*/
+  span {font-size: 0.8rem; background:#fff; padding:0 10px; color: rgba(0,0,0,0.54);}
+
+} 
+
+.users-loginButton{
+/*positon*/
+/*position*/
+width: 85%;
+margin: 15px auto; 
+
+	/*theme*/
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	line-height: 0.1em;
+
+  /*other*/
+  span {border: 1px solid rgba(0, 0, 0, 0.2);
+  	border-radius: 15px;
+  	padding: 5px 15px;
+  	cursor: default;
+  	background: white;
+  }
+
+}
+
+}
+
+.form_login{
+/*form input selection*/
+ /* label color */
+ input {
+ 	caret-color:$caret-color;
+ }
+ .input-field label {
+ 	color: $label-color;
+ }
+   /* label focus color */
+   .input-field input[class="validate"]:focus + label {
+   	color: $label-focus-color;
+   }
+   /* label underline focus color */
+   .input-field input[class="validate"]:focus {
+   	border-bottom: 1px solid #000;
+   	box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[class="validate"].valid {
+   	border-bottom: 1px solid #000;
+   	box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[class="validate"].invalid {
+   	border-bottom: 1px solid #000;
+   	box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+   	color:$form-icon-focus-color ;
+   }
+
+	/*other*/
+	i{
+		color:$form-login-icon;
+	}
+
+	.loginButtonD{
+		display: flex;
+		justify-content: center;
+
+		button{
+			padding: 0px 15px;
+			border-radius: 6px;
+			background:$form-login-button;
+			margin: auto 0;
+		}
+
+	}
+
+	.signButtonD{
+		@extend .loginButtonD;
+		justify-content: space-around;
+		a{
+/*position*/
+width: 50px;
+height: 50px;
+margin: 5px;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+justify-content: center;
+
+/*theme*/
+font-size: 25px;
+color: #fff;
+align-items: center;
+border-radius: 50%;
+transition: 0.5s all linear;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+i{ color:white;}
+}
+.form_login-google{
+	background: #ea4335;
+	&:hover{background: black;}
+}
+.form_login-github{
+	background: #233740;
+	&:hover{
+		background: black ;
+	}
+}
+}
+
+.helper-text{
+	font-size: .9rem;
+	transition:0.5s all ease-in-out;
+	&:hover{
+		color: #8B2E5F;
+	}
+}
+}
+
+.form_other-login{
+
+/*position*/
+display: flex;
+justify-content:space-evenly;
+margin-bottom: 20px;
+/*other*/
+a{
+/*position*/
+width: 50px;
+height: 50px;
+margin: 5px;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+justify-content: center;
+
+/*theme*/
+font-size: 25px;
+color: #fff;
+align-items: center;
+border-radius: 50%;
+transition: 0.5s all linear;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+i{ color:white;}
+}
+.form_login-google{
+	background: #ea4335;
+	&:hover{background: black;}
+}
+.form_login-github{
+	background: #233740;
+	&:hover{
+		background: black ;
+	}
+}
+
+}
+
+.form_other-signin{
+	display: flex;
+	justify-content:center;
+}
+.signUsers{ display: none;}
+
+.active{
+	display: block;
+}
