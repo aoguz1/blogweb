@@ -15,13 +15,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
 
-	<!--<link rel="stylesheet" href="css/login.css">-->
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-
-	#particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b61924; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
-
-</style>
+	
 </head>
 <body>
 	
@@ -142,23 +137,23 @@
 
 	<div class="row loginUsers">
 		<h1>Giriş</h1>
-		<form class="col s12 form_login">
+		<form id="loginform" class="col s12 form_login">
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">account_circle</i>
-					<input id="icon_prefix" type="text" data-error="" class="validate">
+					<input id="icon_prefix" type="text" data-error="" name="loginuser" class="validate">
 					<label for="icon_prefix">Kullanıcı Adı</label>
 
 				</div>
 				<div class="input-field col s12">
 					<i class="material-icons prefix">lock
 					</i>
-					<input id="icon-password" type="password" class="validate">
+					<input id="icon-password" type="password"name="loginpassword" class="validate">
 					<label for="icon-password">Parola</label>
 					<a class="helper-text right-align" href=""> Parolanızı mı unuttunuz?</a>
 				</div>
 				<div class="input-field col s12 loginButtonD">  
-					<button class="btn waves-effect waves-light" type="button">Giriş</button>
+					<button id="loginButton" class="btn waves-effect waves-light" type="button">Giriş</button>
 				</div>
 
 			</div>
@@ -245,92 +240,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/granim.js"></script>
-<script src="js/login.js"></script>
 <script src="js/js.js"></script>
-<script>
-		//let banner = $( window ).height()-$( ".navbar" ).height();
 
-		//$(".index-banner").height(banner);
-
-
-		var granimInstance = new Granim({
-			element: '#indexCanvasBanner',
-			direction: 'diagonal',
-			isPausedWhenNotInView: true,
-			states : {
-				"default-state": {
-					gradients: [
-					['#1d3e45', '#144a55'],
-					['#1d4d42', '#2c4f4d'],
-					['#2e2f49', '#1d3e45']
-					]
-				}
-			}
-		});
-
-//sidenav
-var granimInstance = new Granim({
-	element: '#sidenavCanvasBanner',
-	direction: 'top-bottom',
-	isPausedWhenNotInView: true,
-	states : {
-		"default-state": {
-			gradients: [
-			['#0e191e', '#2f1e16'],
-			['#2f1627', '#0e191e'],
-			['#2f1e16', '#2f1e16']
-			]
-		}
-	}
-});
-
-
-
-	/*
-	*
-	*
-	* PARTİCLES
-	*
-	*/
-	particlesJS.load('particles-js', 'particlesSetting.json', function() {
-		console.log('çalıştı');
-	});
-	/*
-	*
-	* JGUERY CENTER  JAVASCRİPT
-	*
-	*/
-	jQuery.fn.center = function(parent) {
-		if (parent) {
-			parent = this.parent();
-		} else {
-			parent = window;
-		}
-		this.css({
-			"position": "absolute",
-			"top": ((($(parent).height() - this.outerHeight()) / 2) + $(parent).scrollTop() + "px"),
-			"left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
-		});
-		return this;
-	}
-
-	$(".login-block").center(true);
-	$(".login_signButton").click(function(){
-
-
-
-	});
-
-	/*
-	*
-	*  SİDEBAR
-	*
-	*/
-	$(document).ready(function(){
-		$('.sidenav').sidenav();
-	});
-
-</script>
 
 </body>
 </html>

@@ -128,6 +128,16 @@ nav {
 * CONTENT-BANNER
 *
 */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
 .placeholder {
   display: block;
   width: 100%;
@@ -172,7 +182,7 @@ nav {
 */
 @font-face {
   font-family: 'Neutra';
-  src: url("../neutra-text/NeutraText-Bold.otf"); }
+  src: url("neutra-text/NeutraText-Bold.otf"); }
 .container {
   background: white;
   height: 90vh;
@@ -197,7 +207,7 @@ nav {
   background: linear-gradient(to bottom, #F0DB4F, #CAC531);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 .indexCardNew .indexCardBG {
-  background-image: url("../cardBG.svg");
+  background-image: url("../img/cardBG.svg");
   filter: drop-shadow(-1mm -3mm 1mm rgba(0, 0, 0, 0.24));
   width: 100%;
   height: 100%;

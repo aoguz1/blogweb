@@ -157,13 +157,13 @@ nav{
 
 	}
 
-.sideNavFooter
-{
-	position: absolute;
-	width: 100%;
-	bottom: 35px;
-	height: auto;
-	margin: 0 auto;
+	.sideNavFooter
+	{
+		position: absolute;
+		width: 100%;
+		bottom: 35px;
+		height: auto;
+		margin: 0 auto;
 	//color: #fff;
 	ul{
 		display: flex;
@@ -182,25 +182,36 @@ nav{
 * CONTENT-BANNER
 *
 */
-.placeholder
-{
-	display: block;
-width: 100%;
-height: 60vh;
-}
-.indexContentMainCard
-{
-	display: flex;
-	justify-content:space-around;
-	.mainCard{
-		display: flex;
-	justify-content:center;
-		margin-bottom: 5vh;
+
+#particles-js{ 
+	position:absolute;
+	width: 100%; 
+	height: 100%;
+	background-color: #b61924;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: 50% 50%; }
+
+	.placeholder
+	{
+		display: block;
+		width: 100%;
+		height: 60vh;
 	}
-}
+	.indexContentMainCard
+	{
+		display: flex;
+		justify-content:space-around;
+		.mainCard{
+			display: flex;
+			justify-content:center;
+			margin-bottom: 5vh;
+		}
+	}
 
 
-.index-banner{
+	.index-banner{
 /*position*/
 width: 100vw;
 height: 50vh;
@@ -238,7 +249,7 @@ z-index: -1;
 */
 @font-face {
 	font-family: 'Neutra';
-  src: url('../neutra-text/NeutraText-Bold.otf')  /* IE9 Compat Modes */
+  src: url('neutra-text/NeutraText-Bold.otf')  /* IE9 Compat Modes */
 
 }
 //gradiend card color:
@@ -272,7 +283,7 @@ background: linear-gradient(to bottom, $CardBGcolor-1,$CardBGcolor-2); /* W3C, I
 
 
 .indexCardBG{
-	background-image: url("../cardBG.svg");
+	background-image: url("../img/cardBG.svg");
 	filter: drop-shadow(-1mm -3mm 1mm rgba(0, 0, 0, 0.24));
 
 	width: 100%;
@@ -364,7 +375,7 @@ $caret-color:#436d73; //imleç rengi
 
 body {
  /*position*/
-overflow-x:hidden; 
+ overflow-x:hidden; 
  
 /*theme*/
 background-color: white;
