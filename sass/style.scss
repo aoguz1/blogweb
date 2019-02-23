@@ -33,7 +33,7 @@ nav{
 		fill: red;
 	}
 	
-	a{
+	.logo{
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -51,9 +51,15 @@ nav{
 		text-transform:capitalize;
 		font-size: 1.2em;
 		text-align: center;
-		padding: 5px auto;
+		//padding: 5px auto;
 		line-height: initial;
 
+	}
+	.loginOut{
+		@extend button;
+		height: auto;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -102,6 +108,12 @@ nav{
 *
 */
 .indexSideNavMenu{
+
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:column;
+
 
 	/*other*/
 	

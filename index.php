@@ -1,3 +1,6 @@
+<?php 
+session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,29 +26,41 @@
 	<nav>
 		<div class="nav-wrapper navbar ">
 			<div data-target="slide-out" class="sideNavMenu sidenav-trigger"><i class="material-icons">clear_all</i></div>
-			<a href="#" ><i class="fas fa-home"></i></a>
+			<a href="#" class="logo" ><i class="fas fa-home"></i></a>
 			<div class="navSearchD ">
 				<input type="text" placeholder="Arama Yapın" class="navSearch" name="navSearch">
 			</div>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<button id="tikla" data-target="modal1"  class="btn waves-effect waves-light modal-trigger" type="button" name="action">Giriş Yap</button>
+				<?php if (isset($_SESSION['user'])) {?>
+					 <a  class="btn waves-effect waves-light loginOut" href="loginOut.php">Çıkış yap</a>
+				<?php } else{?>   
+					<button id="tikla" data-target="modal1"  class="btn waves-effect waves-light modal-trigger" type="button" name="action">Giriş Yap</button>
+				<?php } ?>
 			</ul>
 
 		</div>
 	</nav>
 	<!--sidebar-->
-	<div id="slide-out" class="sidenav indexSideNavMenu">
-		<div class="sidenavUsersInfo">
-			<i class="fas fa-user-circle"></i>
-			<p class="sidenavUserName">fatihemree</p>
-		</div>
-		<div class="sidenavUserMenu">
-			<ul>
-				<li><i class="fas fa-pen-nib"></i>Yazını Yaz</li>
-				<li><i class="fas fa-book-open"></i>Yazdıklarım</li>
 
-			</ul>
-		</div>
+
+	<div id="slide-out" class="sidenav indexSideNavMenu">
+		<?php if (isset($_SESSION['user'])) {?>
+			<div class="sidenavUsersInfo">
+				<i class="fas fa-user-circle"></i>
+				<p class="sidenavUserName"><?php echo $_SESSION['user']; ?></p>
+			</div>
+
+
+			<div class="sidenavUserMenu">
+				<ul>
+					<li><i class="fas fa-pen-nib"></i>Yazını Yaz</li>
+					<li><i class="fas fa-book-open"></i>Yazdıklarım</li>
+
+				</ul>
+			</div>
+
+
+		<?php } ?>
 
 		<div class="indexSideNavCategories">
 
