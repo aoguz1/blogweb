@@ -266,7 +266,12 @@ click(function(){
 *
 */
 
-$("#loginButton").click(function(){
+
+  
+  
+
+
+$("#loginButton").click(function login(){
 
   myAjax(
     "get",
@@ -278,8 +283,13 @@ $("#loginButton").click(function(){
     }
     )
 
+});
 
 
+$('.loginUsers input').keypress(function(e) {
+  if (e.which == 13) {
+  	$("#loginButton").click();
+  }
 });
 
 
