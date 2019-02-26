@@ -1,25 +1,5 @@
 $(document).ready(function(){
 
-/*
-*
-* GRADİENT BANNER
-*
-*/
-
-var granimInstance = new Granim({
-  element: '#indexCanvasBanner',
-  direction: 'diagonal',
-  isPausedWhenNotInView: true,
-  states : {
-    "default-state": {
-      gradients: [
-      ['#1d3e45', '#144a55'],
-      ['#1d4d42', '#2c4f4d'],
-      ['#2e2f49', '#1d3e45']
-      ]
-    }
-  }
-});
 
 /*
 *
