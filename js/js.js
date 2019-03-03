@@ -57,7 +57,7 @@ var granimInstance = new Granim({
   }
 
 //login card centered
-//$(".login-block").center(true);
+$(".login-block").center(true);
 
 
   /*
