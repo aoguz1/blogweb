@@ -16,6 +16,8 @@ session_start(); ?>
 	<script src="https://cdn.ckeditor.com/4.11.2/standard-all/ckeditor.js"></script>
 	<script src="js/particles.js"></script>
 	<script src="js/granim.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
 	

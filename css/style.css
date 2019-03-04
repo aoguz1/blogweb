@@ -6211,7 +6211,6 @@ nav {
   src: url("neutra-text/NeutraText-Bold.otf"); }
 .container {
   background: white;
-  height: 90vh;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -6525,5 +6524,23 @@ body {
 
 .active {
   display: block; }
+
+/*
+*
+*
+* text.php
+*
+*/
+.textGrid {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 5vh; }
+
+.textButtonGrid {
+  display: flex; }
+.textButtonGrid button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #26a69a; }
 
 /*# sourceMappingURL=style.css.map */

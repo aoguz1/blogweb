@@ -280,7 +280,7 @@ $CardBGcolor-2:#CAC531;
 {
 
 	background: white;
-	height: 90vh;
+	//height: 90vh;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -671,4 +671,27 @@ i{ color:white;}
 
 .active{
 	display: block;
+}
+
+/*
+*
+*
+* text.php
+*
+*/
+
+.textGrid{
+
+width: 90vw;
+margin: 0 auto;
+margin-top: 5vh;
+}
+.textButtonGrid{
+	display: flex;
+	//justify-content:;
+	button{
+		margin-top: 1rem;
+    margin-bottom: 1rem;
+    background:$secondary-color;
+	}
 }
