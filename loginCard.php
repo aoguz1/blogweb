@@ -16,19 +16,22 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">account_circle</i>
-					<input id="icon_prefix" type="text" data-error="" name="loginuser" class="validate">
-					<label for="icon_prefix">Kullanıcı Adı</label>
+					<input id="loginUsername" type="text" data-error=".errLognUser" name="loginuser" class="validate">
+					<label for="loginUsername">Kullanıcı Adı</label>
+					<div class="errLognUser"></div>
 
 				</div>
 				<div class="input-field col s12">
 					<i class="material-icons prefix">lock
 					</i>
-					<input id="icon-password" type="password"name="loginpassword" class="validate">
+					<input id="icon-password" type="password" data-error=".errLognPassword" name="loginpassword" class="validate">
 					<label for="icon-password">Parola</label>
+					<div class="errLognPassword"></div>
+
 					<a class="helper-text right-align" href=""> Parolanızı mı unuttunuz?</a>
 				</div>
 				<div class="input-field col s12 loginButtonD">  
-					<button id="loginButton" class="btn waves-effect waves-light" type="button">Giriş</button>
+					<button id="loginButton" class="btn waves-effect waves-light" type="submit">Giriş</button>
 				</div>
 
 			</div>

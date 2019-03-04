@@ -1,7 +1,7 @@
 <?php 
 include 'baglan.php';
 session_start();
-
+//header('Content-type: application/json');
 
 $userID=$_GET["loginuser"];
 $passwordID=$_GET["loginpassword"];
@@ -20,14 +20,15 @@ $_SESSION['user']=$userID;
 header('Location:index.php');
 }
 
+else{
+header('Content-type: application/json');
+
+			echo json_encode(false);
+}
 
 
 }
-else
-{
 
-	echo "giriş başarısız";
-}
 
 
 

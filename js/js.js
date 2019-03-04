@@ -31,7 +31,7 @@ var granimInstance = new Granim({
 
 
   particlesJS.load('particles-js', 'particlesSetting.json', function() {
-    console.log('çalıştı');
+    //console.log('çalıştı');
   });
 
 
@@ -166,14 +166,17 @@ click(function(){
 
       });*/
 
-
+      jQuery.validator.addMethod("noSpace", function(value, element) { 
+        return value.indexOf(" ") < 0 && value != ""; 
+      }, "Boşluk bırakmadan giriniz.");
 
       $(".kayit").validate({
         rules: {
           username: {
             required: true,
-            minlength: 3,
+            minlength: 5,
             remote:"check.php",
+            noSpace:true
 
           },
           email: {
@@ -183,7 +186,8 @@ click(function(){
           },
           password: {
             required: true,
-            minlength: 5
+            minlength: 5,
+            noSpace:true
           },
           cpassword: {
             required: true,
@@ -246,24 +250,90 @@ click(function(){
 *
 */
 
+$("#loginform").validate({
+  rules:{
 
-  
-  
-
-
-$("#loginButton").click(function login(){
-
-  myAjax(
-    "get",
-    "userID.php",
-    $("#loginform").serialize(),
-
-    function(){
-      //EMPTY SUCCESS
+    loginuser:{
+      required: true,
+      minlength: 5
+    },
+    loginpassword:{
+      required:true,
+      minlength:5
     }
-    )
+  },
+  messages:{
+    loginuser:{
+      required:"Bu alanı boş bırakmayın.",
+      minlength:"En az 5 karekter giriniz."
+
+    },
+    loginpassword:{
+      required:"Bu alanı boş bırakmayın.",
+      minlength: "En az 5 karekter giriniz."
+    }
+
+
+  }
+  ,
+  errorElement : 'div',
+  errorPlacement: function(error, element) {
+    var placement = $(element).data('error');
+    $(placement).addClass("errForm");
+    if (placement) {
+      $(placement).append(error);
+    } else {
+      error.insertAfter(element);
+    }
+  },
+
+
+  submitHandler: function(){ 
+    myAjax(
+      "get",
+      "userID.php",
+      $("#loginform").serialize(),
+      function(data){
+
+        if (data===false) {
+                    //errmessages
+                    var placement  =[ $("#loginUsername").data('error'),$("#icon-password").data('error')];
+                    
+                    placement.forEach(element => {
+                     $(element).addClass("errForm");
+                     $(element).text("kullanıcı adı ya da şifre yanlıştır.");
+                   });}
+                    var errDeleteLogin  =[ $("#loginUsername"),$("#icon-password")];
+                    errDeleteLogin.forEach(element => {
+                     $(element).focus(function() {
+                      let  errKey= $(this).data('error');
+                      $(errKey).text(" ");
+                      
+
+                    });
+
+                   });
+                    
+
+                    $("#loading").hide("fade","slow");
+                  },
+                  function(){
+                    $("#loading").show("fade","fast");
+                  });
+  }
+
+
+
+  
 
 });
+
+
+
+
+
+
+
 
 
 $('.loginUsers input').keypress(function(e) {
@@ -286,7 +356,7 @@ function myAjax(type,url,data,success,beforeSend,complete){
   this.success=success;
   this.beforeSend=beforeSend;
   this.complete=complete;
-  console.log(this.beforeSend)
+  //console.log(this.beforeSend)
   $.ajax({
     type:this.type,
     url: this.url,
