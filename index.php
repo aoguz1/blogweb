@@ -54,7 +54,7 @@ include 'header.php';
 
 
 <!--index login -->
-
+<script src="js/particles.js"></script>
 <script>
 	
 	/*
@@ -79,6 +79,20 @@ var granimInstance = new Granim({
     }
   }
 });
+
+
+
+ /*
+  *
+  *
+  * PARTİCLES
+  *
+  */
+
+
+  particlesJS.load('particles-js', 'particlesSetting.json', function() {
+    //console.log('çalıştı');
+  });
 
 </script>
 

@@ -12,12 +12,18 @@ session_start(); ?>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/modaal.css">
+
+
 	<script src="https://cdn.ckeditor.com/4.11.2/standard-all/ckeditor.js"></script>
-	<script src="js/particles.js"></script>
+	
 	<script src="js/granim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+
+
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	

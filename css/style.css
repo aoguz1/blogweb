@@ -2448,7 +2448,7 @@ td, th {
   float: right !important; }
 
 .no-select, input[type=range], input[type=range] + .thumb {
-  user-select: none; }
+  user-select: auto; }
 
 .circle {
   border-radius: 50%; }
@@ -4735,9 +4735,6 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:before, input[type=checkbox]
 
 /* Select Field
    ========================================================================== */
-select {
-  display: none; }
-
 select.browser-default {
   display: block; }
 
@@ -6330,6 +6327,17 @@ body {
 	right: 0;
 	left: 0;
 }*/
+.errForm {
+  position: relative;
+  top: -0.5rem;
+  left: 3rem;
+  font-size: 0.8rem;
+  color: #FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%); }
+
 .login-block {
   /*position*/
   width: 30vw;
@@ -6343,16 +6351,6 @@ body {
   background: #fff;
   display: none;
   /*other*/ }
-.login-block .errForm {
-  position: relative;
-  top: -0.5rem;
-  left: 3rem;
-  font-size: 0.8rem;
-  color: #FF4081;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%); }
 .login-block #loading {
   width: 90%;
   margin: 0 auto;
@@ -6531,6 +6529,11 @@ body {
 * text.php
 *
 */
+.textBanner {
+  position: relative;
+  top: -64px;
+  z-index: -5; }
+
 .textGrid {
   width: 90vw;
   margin: 0 auto;
@@ -6538,9 +6541,60 @@ body {
 
 .textButtonGrid {
   display: flex; }
-.textButtonGrid button {
+.textButtonGrid button, .textButtonGrid input[type="submit"] {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background: #26a69a; }
+
+/*
+*
+* textBook.php
+*
+*
+*/
+.textBookBanner {
+  height: 300px;
+  position: relative;
+  z-index: -5;
+  top: -64px;
+  background-image: url(../img/textBook.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.textBookHeader {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  color: white;
+  font-size: 3em; }
+
+.textBookUser {
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  color: white;
+  font-size: 1em; }
+.textBookUser .row {
+  margin-bottom: 0px !important; }
+.textBookUser .textBookHeaderName {
+  font-weight: bold;
+  color: black;
+  text-transform: capitalize; }
+.textBookUser .textBookHeaderDate {
+  color: darkslategrey;
+  font-weight: 500;
+  font-size: small; }
+.textBookUser .textBookUserImg {
+  background-image: url("https://i.hizliresim.com/V30lEZ.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */
