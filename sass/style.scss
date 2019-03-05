@@ -427,6 +427,19 @@ background-color: white;
 	right: 0;
 	left: 0;
 }*/
+
+.errForm{
+	position: relative;
+	top: -0.5rem;
+	left: 3rem;
+	font-size: 0.8rem;
+	color: #FF4081;
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
 .login-block{
 
 /*position*/
@@ -443,17 +456,7 @@ background: #fff;
 display: none;
 
 /*other*/
-.errForm{
-	position: relative;
-	top: -0.5rem;
-	left: 3rem;
-	font-size: 0.8rem;
-	color: #FF4081;
-	-webkit-transform: translateY(0%);
-	-ms-transform: translateY(0%);
-	-o-transform: translateY(0%);
-	transform: translateY(0%);
-}
+
 
 #loading{
 	width: 90%;
@@ -679,7 +682,11 @@ i{ color:white;}
 * text.php
 *
 */
-
+.textBanner{
+position: relative;
+    top: -64px;
+    z-index: -5;
+    }
 .textGrid{
 
 width: 90vw;
@@ -689,7 +696,7 @@ margin-top: 5vh;
 .textButtonGrid{
 	display: flex;
 	//justify-content:;
-	button{
+	button,input[type="submit"]{
 		margin-top: 1rem;
     margin-bottom: 1rem;
     background:$secondary-color;

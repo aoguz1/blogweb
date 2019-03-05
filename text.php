@@ -1,42 +1,69 @@
 <?php include 'header.php'; ?>
 
-<form action="">
+<img  class="textBanner" src="img/textBanner.svg" alt="">
+
+
+
+<form method="post" id="textForm">
 
 
 	<div class="row">
 		<div class="textGrid">
-			<div class="col s6">
-				<div class="row">
-					<div class="input-field col s12  ">
+			
+				
+					<div class="input-field col s5  ">
 						<i class="fas fa-pen-nib prefix"></i>
-						<input id="textHeader" type="text" class="validate">
+						<input id="textHeader" type="text" name="textHeader"data-error=".errTextHeader" class="validate">
 						<label for="textHeader">Konunun başlığını giriniz</label>
+						<div class="errTextHeader"></div>
 					</div>
-					<div class="input-field col s12  ">
+					<div class="input-field col s5  ">
 						<i class="fab fa-github prefix"></i>
-						<input id="gitHub" type="text" class="validate">
+						<input id="gitHub" type="text" name="textGit" data-error=".errgitHub" class="validate">
 						<label for="gitHub">Github dökümanı için linki buraya yapıştır :)</label>
-
-						<a class="helper-text right-align" href="">önizlemek için tıklayın</a>
+						<div class="errgitHub"></div>
+						<a class="helper-text right-align inline" href="markdown.php">önizlemek için tıklayın</a>
 					</div>
-				</div>
-			</div>
-			<div class="col offset-s2 textButtonGrid">
 				
-				<button class="waves-effect waves-light btn-large">gönder</button>
+			
+			<div class="col s2 textButtonGrid">
 				
+ 				<button class="waves-effect waves-light btn-large" type="submit">gönder</button>
+				
+<!-- <input type="submit"class="waves-effect waves-light btn" placeholder="gönder">
+ -->
 
-			</div>
-		</div>
+</div>
+</div>
 
 
-	</div>
-	<div class="input-field col s12">
-		<textarea name="" id="editor1" cols="30" rows="10"></textarea>
-	</div>
+</div>
+<div class="input-field col s12">
+	<textarea name="textContent" id="editor1" cols="30" rows="10" data-error=".errTextContent"></textarea>
+	<div class="errTextContent"></div>
+</div>
 </div>
 </form>
+
+
+
+<!-- modal -->
+
+
+
+
+
+
+<script src="js/modaal.js"></script>
+<script src="https://cdn.ckeditor.com/4.11.2/standard-all/ckeditor.js"></script>
 <script>
+
+$(document).ready(function(){
+    $('select').formSelect();
+     $('select').show();
+  });
+
+
 	CKEDITOR.replace('editor1',{
 
 		extraPlugins: 'codesnippet , autogrow',
@@ -63,13 +90,22 @@
 		});
 
 
-$("nav").css("background","#264452");
-	</script>
+	//$("nav").css("background","#264452");
+
+	$('.inline').modaal({
+		type: 'ajax',
+		loading_content: 'Yükleniyor...'
+	});
+
+ 
+
+
+</script>
 
 
 
 
-	<?php 
-	include 'loginCard.php';
-	include 'footer.php';
-	?>
+<?php 
+
+include 'footer.php';
+?>

@@ -22,17 +22,7 @@ var granimInstance = new Granim({
 });
 
 
-  /*
-  *
-  *
-  * PARTİCLES
-  *
-  */
 
-
-  particlesJS.load('particles-js', 'particlesSetting.json', function() {
-    //console.log('çalıştı');
-  });
 
 
   /*
@@ -328,7 +318,66 @@ $("#loginform").validate({
 
 });
 
+/*
+*
+* textForm validate
+* 
+*
+*/
+$("#textForm").validate({
+    rules:{
+      textHeader:{
+        required:true,
+        minlength:5
 
+      },
+      textGit:{
+        url:true
+
+      },
+      textContent:{
+        minlength:160
+      }
+
+    },
+    messages:{
+      textHeader:{
+        required:"Lütfen başlık giriniz.",
+        minlength:"En az 5 karakter giriniz."
+      },
+      textGit:{
+        url:"gitHub adresi giriniz."
+      },
+      textContent:{
+        minlength:"En az 160 karakter girmelisiniz."
+      }
+
+    },
+    errorElement : 'div',
+              errorPlacement: function(error, element) {
+                var placement = $(element).data('error');
+                $(placement).addClass("errForm");
+                if (placement) {
+                  $(placement).append(error);
+                } else {
+                  error.insertAfter(element);
+                }
+              },
+              submitHandler: function(){ 
+                myAjax(
+                  "post",
+                  "textSend.php",
+                  $("#textForm").serialize(),
+                  function(){
+                 alert("başarılı");
+                  },
+                  function(){
+                    //empty
+                  });
+              }
+
+
+  });
 
 
 
@@ -341,6 +390,17 @@ $('.loginUsers input').keypress(function(e) {
   	$("#loginButton").click();
   }
 });
+
+
+/*
+*
+*
+* text ajax.php
+*
+*
+**/
+
+
 
 
 /*
