@@ -683,22 +683,83 @@ i{ color:white;}
 *
 */
 .textBanner{
-position: relative;
-    top: -64px;
-    z-index: -5;
-    }
+	position: relative;
+	top: -64px;
+	z-index: -5;
+}
 .textGrid{
 
-width: 90vw;
-margin: 0 auto;
-margin-top: 5vh;
+	width: 90vw;
+	margin: 0 auto;
+	margin-top: 5vh;
 }
 .textButtonGrid{
 	display: flex;
 	//justify-content:;
 	button,input[type="submit"]{
 		margin-top: 1rem;
-    margin-bottom: 1rem;
-    background:$secondary-color;
+		margin-bottom: 1rem;
+		background:$secondary-color;
+	}
+}
+
+
+/*
+*
+* textBook.php
+*
+*
+*/
+.textBookBanner{
+	height: 300px;
+	position: relative;
+	z-index: -5;
+	top: -64px;
+	background-image: url(../img/textBook.svg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.textBookHeader{
+	position: absolute;
+	top: 35%;
+	left: 5%;
+	color: white;
+	font-size: 3em;
+}
+
+
+.textBookUser{
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	color: white;
+	font-size: 1em;
+	.row{
+		margin-bottom: 0px !important;
+	}
+
+	.textBookHeaderName{
+		font-weight: bold;
+		color: black;
+		text-transform: capitalize;
+	}
+	.textBookHeaderDate{
+		
+		color: darkslategrey;
+		font-weight: 500;
+		font-size: small;
+	}
+	.textBookUserImg{
+		background-image: url("https://i.hizliresim.com/V30lEZ.jpg");
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-top: 15px;
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
 	}
 }

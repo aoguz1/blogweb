@@ -28,8 +28,8 @@
 			
 			<div class="col s2 textButtonGrid">
 				
- 				<button class="waves-effect waves-light btn-large" type="submit">gönder</button>
-				
+<!--  				<button class="waves-effect waves-light btn-large" type="submit">gönder</button>
+ -->				<input type="submit" class="waves-effect waves-light btn-large" placeholder="gönder">
 <!-- <input type="submit"class="waves-effect waves-light btn" placeholder="gönder">
  -->
 
@@ -40,6 +40,7 @@
 </div>
 <div class="input-field col s12">
 	<textarea name="textContent" id="editor1" cols="30" rows="10" data-error=".errTextContent"></textarea>
+
 	<div class="errTextContent"></div>
 </div>
 </div>

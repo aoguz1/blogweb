@@ -51,8 +51,8 @@
 //url parçalama yap link buraya gelecek databaseden
 
 
-			let readme= "https://raw.githubusercontent.com/pauwebmaster/codesdb/master/README.md ";
-
+			let readme= "https://raw.githubusercontent.com/defunkt/jquery-pjax/master/README.md ";
+						
 
 			$.get(readme, function(markdown) {
 

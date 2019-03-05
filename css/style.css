@@ -6546,4 +6546,55 @@ body {
   margin-bottom: 1rem;
   background: #26a69a; }
 
+/*
+*
+* textBook.php
+*
+*
+*/
+.textBookBanner {
+  height: 300px;
+  position: relative;
+  z-index: -5;
+  top: -64px;
+  background-image: url(../img/textBook.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.textBookHeader {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  color: white;
+  font-size: 3em; }
+
+.textBookUser {
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  color: white;
+  font-size: 1em; }
+.textBookUser .row {
+  margin-bottom: 0px !important; }
+.textBookUser .textBookHeaderName {
+  font-weight: bold;
+  color: black;
+  text-transform: capitalize; }
+.textBookUser .textBookHeaderDate {
+  color: darkslategrey;
+  font-weight: 500;
+  font-size: small; }
+.textBookUser .textBookUserImg {
+  background-image: url("https://i.hizliresim.com/V30lEZ.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; }
+
 /*# sourceMappingURL=style.css.map */
