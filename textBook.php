@@ -3,18 +3,28 @@ include 'header.php';
  ?>
 
 <div class="textBookBanner">
+
+<div class="draftBookBanner">
 	<div class="textBookHeader">Ajax Nedir?</div>
-
-
-<div class="textBookUser z-depth-4">
+	
+<div class="textBookUser">
 	<div class="row">
 		<div class="col s5"><div class="textBookUserImg z-depth-4"></div></div>
 		<div class="col s7">
-			<p class="textBookHeaderName">barbaraPalvin</p>
+			<p class="textBookHeaderName">fatihemree</p>
 			<p class="textBookHeaderDate">Haz 03 2019</p>
 		</div>
 	</div>
 </div>
+	
+<div class="textBookHeaderBannerTypeLogo  z-depth-5"><img src="img/js-logo.svg" alt=""></div>
+
+
+</div>
+
+
+
+
 </div>
 
 <div class="container">

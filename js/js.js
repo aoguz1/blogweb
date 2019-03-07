@@ -284,7 +284,7 @@ $("#loginform").validate({
       "userID.php",
       $("#loginform").serialize(),
       function(data){
-
+alert("geldiiii");
         if (data===false) {
                     //errmessages
                     var placement  =[ $("#loginUsername").data('error'),$("#icon-password").data('error')];
@@ -364,6 +364,10 @@ $("#textForm").validate({
                 }
               },
               submitHandler: function(){ 
+for ( instance in CKEDITOR.instances )
+         {
+           CKEDITOR.instances[instance].updateElement();
+
                 myAjax(
                   "post",
                   "textSend.php",
@@ -375,7 +379,7 @@ $("#textForm").validate({
                     //empty
                   });
               }
-
+}
 
   });
 

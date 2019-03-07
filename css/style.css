@@ -6553,48 +6553,79 @@ body {
 *
 */
 .textBookBanner {
+  box-shadow: 0px 11px 5.5px rgba(0, 0, 0, 0.24);
   height: 300px;
   position: relative;
   z-index: -5;
   top: -64px;
-  background-image: url(../img/textBook.svg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.textBookHeader {
+  background-color: #f0db4f; }
+.textBookBanner .draftBookBanner {
+  filter: drop-shadow(-2mm 2mm 1mm rgba(0, 0, 0, 0.54));
   position: absolute;
-  top: 35%;
-  left: 5%;
+  right: 0px;
+  bottom: 0;
+  width: 101.5%;
+  height: 100%;
+  /* filter: drop-shadow(0mm 1mm 1mm whitesmoke); */
+  background-image: url(../img/textBook.svg);
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*other*/ }
+.textBookBanner .draftBookBanner .textBookHeader {
+  position: absolute;
+  top: 60px;
+  width: 50vw;
+  height: 20vh;
+  left: 170px;
   color: white;
-  font-size: 3em; }
+  font-size: 3.5em; }
 
 .textBookUser {
-  background-color: white;
-  border-radius: 10px 10px 0px 0px;
+  /* box-shadow: 6.5px 6.9px 1.9px rgb(0,0,0,0.34); */
+  /* background-color: whitesmoke; */
+  border-radius: 3px;
   position: absolute;
-  bottom: 0;
-  left: 5%;
+  bottom: 10px;
+  left: 10%;
   color: white;
   font-size: 1em; }
 .textBookUser .row {
   margin-bottom: 0px !important; }
 .textBookUser .textBookHeaderName {
   font-weight: bold;
-  color: black;
-  text-transform: capitalize; }
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  margin-top: 1.7em; }
 .textBookUser .textBookHeaderDate {
-  color: darkslategrey;
+  color: grey;
   font-weight: 500;
-  font-size: small; }
+  font-size: small;
+  margin: 0px; }
 .textBookUser .textBookUserImg {
-  background-image: url("https://i.hizliresim.com/V30lEZ.jpg");
+  background-image: url(https://i.hizliresim.com/V3ybBP.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 15px;
   width: 64px;
   height: 64px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  /* border: 1.2px solid whitesmoke; */
+  box-shadow: 0px 0px 6.9px 1.7px; }
+
+.textBookHeaderBannerTypeLogo {
+  position: absolute;
+  right: 6.4%;
+  top: 23.8%;
+  border: 61px;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  border-radius: 20px; }
+.textBookHeaderBannerTypeLogo img {
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

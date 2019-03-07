@@ -10,28 +10,28 @@
 	<div class="row">
 		<div class="textGrid">
 			
-				
-					<div class="input-field col s5  ">
-						<i class="fas fa-pen-nib prefix"></i>
-						<input id="textHeader" type="text" name="textHeader"data-error=".errTextHeader" class="validate">
-						<label for="textHeader">Konunun başlığını giriniz</label>
-						<div class="errTextHeader"></div>
-					</div>
-					<div class="input-field col s5  ">
-						<i class="fab fa-github prefix"></i>
-						<input id="gitHub" type="text" name="textGit" data-error=".errgitHub" class="validate">
-						<label for="gitHub">Github dökümanı için linki buraya yapıştır :)</label>
-						<div class="errgitHub"></div>
-						<a class="helper-text right-align inline" href="markdown.php">önizlemek için tıklayın</a>
-					</div>
-				
+
+			<div class="input-field col s5  ">
+				<i class="fas fa-pen-nib prefix"></i>
+				<input id="textHeader" type="text" name="textHeader"data-error=".errTextHeader" class="validate">
+				<label for="textHeader">Konunun başlığını giriniz</label>
+				<div class="errTextHeader"></div>
+			</div>
+			<div class="input-field col s5  ">
+				<i class="fab fa-github prefix"></i>
+				<input id="gitHub" type="text" name="textGit" data-error=".errgitHub" class="validate">
+				<label for="gitHub">Github dökümanı için linki buraya yapıştır :)</label>
+				<div class="errgitHub"></div>
+				<a class="helper-text right-align inline" href="markdown.php">önizlemek için tıklayın</a>
+			</div>
+
 			
 			<div class="col s2 textButtonGrid">
 				
-<!--  				<button class="waves-effect waves-light btn-large" type="submit">gönder</button>
- -->				<input type="submit" class="waves-effect waves-light btn-large" placeholder="gönder">
+				<button class="waves-effect waves-light btn-large" type="submit">gönder</button>
+				
 <!-- <input type="submit"class="waves-effect waves-light btn" placeholder="gönder">
- -->
+-->
 
 </div>
 </div>
@@ -39,7 +39,7 @@
 
 </div>
 <div class="input-field col s12">
-	<textarea name="textContent" id="editor1" cols="30" rows="10" data-error=".errTextContent"></textarea>
+	<textarea name="textcontent" id="editor1" cols="30" rows="10" data-error=".errTextContent"></textarea>
 
 	<div class="errTextContent"></div>
 </div>
@@ -59,10 +59,10 @@
 <script src="https://cdn.ckeditor.com/4.11.2/standard-all/ckeditor.js"></script>
 <script>
 
-$(document).ready(function(){
-    $('select').formSelect();
-     $('select').show();
-  });
+	$(document).ready(function(){
+		$('select').formSelect();
+		$('select').show();
+	});
 
 
 	CKEDITOR.replace('editor1',{
@@ -91,6 +91,7 @@ $(document).ready(function(){
 		});
 
 
+
 	//$("nav").css("background","#264452");
 
 	$('.inline').modaal({
@@ -98,7 +99,7 @@ $(document).ready(function(){
 		loading_content: 'Yükleniyor...'
 	});
 
- 
+
 
 
 </script>

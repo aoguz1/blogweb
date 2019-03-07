@@ -4,7 +4,7 @@ session_start();
 
 $header=$_POST["textHeader"];
 $github=isset($_POST["gitHub"]) ? $_POST["gitHub"] : "empty" ;
-$content=$_POST["textContentt"];
+$content=$_POST["textcontent"];
 $user=$_SESSION['user'];
 echo "<br>".$header.$github."CONTENT:".$content."-".$user;
 
