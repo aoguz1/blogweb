@@ -284,7 +284,7 @@ $("#loginform").validate({
       "userID.php",
       $("#loginform").serialize(),
       function(data){
-alert("geldiiii");
+
         if (data===false) {
                     //errmessages
                     var placement  =[ $("#loginUsername").data('error'),$("#icon-password").data('error')];
@@ -406,6 +406,27 @@ $('.loginUsers input').keypress(function(e) {
 
 
 
+
+
+
+
+
+
+
+
+
+                /*
+                *
+                *
+              *    textBook.php
+                *
+                *
+                */
+
+                $("#markdownGıthub").load("markdown.php");
+      
+
+  
 
 /*
 *

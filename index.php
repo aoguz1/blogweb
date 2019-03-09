@@ -17,10 +17,10 @@ include 'header.php';
 			<!--card-->
 			<div class="col s11  indexContentMainCard ">
 				<div class="row">
-					<?php for ($i=0; $i <6 ; $i++) { ?>
+					<?php for ($i=0; $i < 3; $i++) { ?>
 						<div class="col s4  mainCard">
 
-							<div class="indexCardNew z-depth-4">
+							<a href="textBook.php"><div class="indexCardNew z-depth-4">
 								<div class="indexCardBG">
 									<div class="indexType">JS</div>
 									<h5>ajax nedir?</h5>
@@ -32,7 +32,7 @@ include 'header.php';
 </div> -->
 </div>
 
-</div>
+</div></a>
 
 </div>
 <?php } ?> 	 

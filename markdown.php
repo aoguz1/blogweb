@@ -16,6 +16,7 @@
 <body>
 
 
+
 	<div id="layout">
 
 		<div id="test-editormd-view">
@@ -45,18 +46,25 @@
 
 	<script src="js/editormd.js"></script>
 	<script type="text/javascript">
-		$(function() {
-			var testEditormdView, testEditormdView2;
+		/*
+*
+*
+* markdown.php
+*
+*/
+
+$(document).ready(function(){
+var testEditormdView, testEditormdView2;
 
 //url parçalama yap link buraya gelecek databaseden
 
 
-			let readme= "https://raw.githubusercontent.com/defunkt/jquery-pjax/master/README.md ";
-						
+      let readme= "https://raw.githubusercontent.com/defunkt/jquery-pjax/master/README.md ";
+            
 
-			$.get(readme, function(markdown) {
+      $.get(readme, function(markdown) {
 
-				testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+        testEditormdView = editormd.markdownToHTML("test-editormd-view", {
                         markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
                         //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
                         htmlDecode      : "style,script,iframe",  // you can filter tags decode
@@ -81,7 +89,7 @@
                     //alert(testEditormdView.getMarkdown());
                 });
 
-			testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
+      testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
                     htmlDecode      : "style,script,iframe",  // you can filter tags decode
                     emoji           : true,
                     taskList        : true,
@@ -89,7 +97,8 @@
                     flowChart       : true,  // 默认不解析
                     sequenceDiagram : true,  // 默认不解析
                 });
-		});
+
+      });
 	</script>
 
 

@@ -1,4 +1,6 @@
 <?php 
+
+include 'baglan.php';
 session_start(); ?>
 
 <!DOCTYPE html>

@@ -6,7 +6,7 @@ $header=$_POST["textHeader"];
 $github=isset($_POST["gitHub"]) ? $_POST["gitHub"] : "empty" ;
 $content=$_POST["textcontent"];
 $user=$_SESSION['user'];
-echo "<br>".$header.$github."CONTENT:".$content."-".$user;
+//echo "<br>".$header.$github."CONTENT:".$content."-".$user;
 
 $ekle = $bag->ekle("text", "header,git,content,username",array("$header","$github","$content","$user"));
 
